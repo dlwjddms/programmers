@@ -10,11 +10,13 @@ bool check_dup(vector<int> number, int n){
     }
     return false;
 }
+/*add two number while iter*/
 vector<int>find_arr(vector<int> numbers){
     vector<int> answer;
     for(int i =0 ; i< numbers.size(); i++){
         for(int j =i+1 ; j< numbers.size();j++){
             int num = numbers[i]+numbers[j];
+            /*check if num is already in the vector answer*/
             bool check = check_dup(answer, num);
             if(check == false)
                 answer.push_back(num);
